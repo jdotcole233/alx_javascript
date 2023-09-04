@@ -3,12 +3,12 @@
 class Square extends require('./5-square') {
   charPrint (c) {
     if (!c) {
-      this.print();
-      return;
+      return this.print();
     }
 
-    this.char = c;
-    this.print();
+    for (let column = 0; column < this.height; column++) {
+      console.log(c.repeat(this.width))
+    }
   }
 }
 
