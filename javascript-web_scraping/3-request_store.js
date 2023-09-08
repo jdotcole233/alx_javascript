@@ -6,5 +6,5 @@ const fs = require('fs');
 const url = process.argv[2];
 const filePath = process.argv[3];
 
-request.get(url, { encoding: 'utf-8' })
+request.get(url)
   .pipe(fs.createWriteStream(filePath));
