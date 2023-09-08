@@ -15,7 +15,7 @@ request.get(url)
     JSON.parse(bufferData)
       .map((todo) => {
          if (!response.hasOwnProperty(todo.userId)) {
-            response[todo.userId] = 1;
+            response[todo.userId] = 0;
          }
 
          let counter = response[todo.userId];
