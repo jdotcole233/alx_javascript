@@ -12,6 +12,9 @@ request.get(url, { encoding: 'utf-8' })
   })
   .on('end', function () {
     const data = JSON.parse(chunks);
-    const resp = data.results.map(film => film.characters).flat().filter(char => char.includes(characterID));
+    const resp = data.results
+      .map(film => film.characters)
+      .flat()
+      .filter(char => char.includes(characterID));
     console.log(resp.length);
   });
