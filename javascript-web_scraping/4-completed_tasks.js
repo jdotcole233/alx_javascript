@@ -14,7 +14,7 @@ request.get(url)
     const response = {};
     JSON.parse(bufferData)
       .map((todo) => {
-         if (!response.hasOwnProperty(todo.userId)) {
+         if (!response.hasOwnProperty(todo.userId) && todo.completed) {
             response[todo.userId] = 0;
          }
 
