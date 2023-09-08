@@ -21,8 +21,8 @@ request.get(url)
          let counter = response[todo.userId];
          if (todo.completed) {
            counter = counter + 1;
+           response[todo.userId] = counter
          }
-         response[todo.userId] = counter
       });
     console.log(response);
   });
