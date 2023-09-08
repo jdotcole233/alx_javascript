@@ -18,8 +18,9 @@ request.get(url)
           response[todo.userId] = 0;
         }
 
+
         if (todo.completed) {
-          response[todo.userId]++;
+          response[todo.userId] = response[todo.userId]++;
         }
       });
     console.log(response);
