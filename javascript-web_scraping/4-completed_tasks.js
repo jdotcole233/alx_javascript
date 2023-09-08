@@ -14,7 +14,7 @@ request.get(url)
     const response = {};
     JSON.parse(bufferData)
       .forEach(todo => {
-        if (!response.prototype.hasOwnProperty.call(todo.userId)) {
+        if (!response?.prototype.hasOwnProperty.call(todo.userId)) {
           response[todo.userId] = 0;
         }
 
