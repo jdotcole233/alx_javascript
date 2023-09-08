@@ -18,10 +18,12 @@ request.get(url)
           response[todo.userId] = 0;
         }
 
-
+        let counter = response[todo.userId];
         if (todo.completed) {
-          response[todo.userId] = response[todo.userId]++;
+         counter = counter + 1;
         }
+
+        response[todo.userId] = counter;
       });
     console.log(response);
   });
